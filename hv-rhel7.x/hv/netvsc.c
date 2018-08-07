@@ -35,8 +35,6 @@
 #include "hyperv_net.h"
 #include "netvsc_trace.h"
 
-#include <linux/hyperv.h>
-
 /*
  * Switch the data path from the synthetic interface to the VF
  * interface.
