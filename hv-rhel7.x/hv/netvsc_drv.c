@@ -35,10 +35,6 @@
 #include <linux/slab.h>
 #include <linux/rtnetlink.h>
 #include <linux/netpoll.h>
-#if (RHEL_RELEASE_CODE == RHEL_RELEASE_VERSION(7,0))
-#include <linux/reciprocal_div.h>
-#endif
-
 #include <net/arp.h>
 #include <net/route.h>
 #include <net/sock.h>
@@ -48,6 +44,10 @@
 #include <net/ip6_checksum.h>
 
 #include "hyperv_net.h"
+
+#if (RHEL_RELEASE_CODE == RHEL_RELEASE_VERSION(7,0))
+#include <linux/reciprocal_div.h>
+#endif
 
 #define RING_SIZE_MIN	64
 #define RETRY_US_LO	5000
