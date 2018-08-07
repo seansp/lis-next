@@ -196,8 +196,6 @@ extern u32 netvsc_ring_bytes;
 
 #if (RHEL_RELEASE_CODE == RHEL_RELEASE_VERSION(7,0))
 extern u32 netvsc_ring_reciprocal;
-#else
-extern struct reciprocal_value netvsc_ring_reciprocal;
 #endif
 
 struct netvsc_device *netvsc_device_add(struct hv_device *device,
