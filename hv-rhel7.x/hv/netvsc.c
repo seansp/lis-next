@@ -31,14 +31,15 @@
 #include <asm/sync_bitops.h>
 #include <linux/rtnetlink.h>
 #include <linux/prefetch.h>
+
+#include "hyperv_net.h"
+#include "netvsc_trace.h"
+
 #if (RHEL_RELEASE_CODE == RHEL_RELEASE_VERSION(7,0))
 #include <linux/reciprocal_div.h>
 #else
 #include <linux/hyperv.h>
 #endif
-
-#include "hyperv_net.h"
-#include "netvsc_trace.h"
 
 /*
  * Switch the data path from the synthetic interface to the VF
