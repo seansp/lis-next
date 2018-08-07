@@ -124,7 +124,7 @@ struct hv_ring_buffer_info {
 	struct hv_ring_buffer *ring_buffer;
 	u32 ring_size;			/* Include the shared header */
 #if (RHEL_RELEASE_CODE > RHEL_RELEASE_VERSION(7,0))
-	struct reciproval_value ring_size_div10_reciprocal;
+	struct reciprocal_value ring_size_div10_reciprocal;
 #endif
 	spinlock_t ring_lock;
 
